@@ -28,12 +28,12 @@
         <mat-icon>home</mat-icon>
         <span>Home</span>
       </button>
-      <button mat-menu-item >
-        <mat-icon [routerLink]="['/students']">add</mat-icon>
+      <button mat-menu-item [routerLink]="['/students']">
+        <mat-icon >add</mat-icon>
         <span>Agregar Alumno</span>
       </button>
-      <button mat-menu-item >
-        <mat-icon [routerLink]="['/students-list']">list</mat-icon>
+      <button mat-menu-item  [routerLink]="['/students-list']">
+        <mat-icon>list</mat-icon>
         <span>Lista de Alumnos</span>
       </button>
       <button mat-menu-item>
@@ -44,5 +44,5 @@
   </mat-toolbar>
   
   <!-- Agregar el componente del modal aquí -->
-  <app-login-modal [visible]="modalVisible" (close)="cerrarLoginModal()"></app-login-modal>
+ 
   

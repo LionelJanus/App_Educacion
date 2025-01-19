@@ -18,6 +18,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { StudentsComponent } from './pages/students/students.component';
 import { StudentsListComponent } from './pages/students-list/students-list.component';
 import { MatTableModule } from '@angular/material/table';  
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './pages/home/home-page';
 
 
 
@@ -28,6 +30,7 @@ import { MatTableModule } from '@angular/material/table';
     LoginModalComponent,
     StudentsComponent,
     StudentsListComponent,
+    HomeComponent,
    
   ],
   imports: [
@@ -44,6 +47,7 @@ import { MatTableModule } from '@angular/material/table';
     MatCheckboxModule,
     FormsModule,
     MatTableModule,
+    RouterModule,
     MatToolbarModule,
    
   ],

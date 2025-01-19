@@ -14,8 +14,12 @@ export class StudentsComponent {
   constructor(private fb: FormBuilder) {
     this.studentForm = this.fb.group({
       name: ['', Validators.required],
+      lastname: ['', Validators.required],
       age: ['', [Validators.required, Validators.min(1)]],
-      email: ['', [Validators.required, Validators.email]]
+      email: ['', [Validators.required, Validators.email]],
+      country: ['', Validators.required],
+      address: ['', Validators.required],
+      course: ['', Validators.required],
     });
   }
 

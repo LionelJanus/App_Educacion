@@ -10,13 +10,13 @@ import { noHomeroValidator} from '../../../shared/custom-validators/index'
   styleUrls: ['./login-modal.component.scss']
 })
 export class LoginModalComponent {
-  @Input() visible = false;  // Propiedad de entrada visible
   @Output() close = new EventEmitter<void>();
 
 loginForm: FormGroup;
 passwordControlIsValid: any;
 checked: any;
 rememberMe: any;
+modalVisible: any;
 
 constructor(private fb: FormBuilder) {
   this.loginForm = this.fb.group({
