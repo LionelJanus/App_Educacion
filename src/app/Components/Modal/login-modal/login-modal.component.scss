@@ -1,0 +1,79 @@
+/* Fondo oscuro para el overlay del modal */
+.modal-overlay {
+  display: flex;
+  justify-content: center;
+    position: fixed; /* Fijar el modal a la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda la pantalla */
+    height: 100%; /* Ocupa toda la pantalla */
+    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
+    display: flex;
+    justify-content: center; /* Centrar el modal horizontalmente */
+    align-items: center; /* Centrar el modal verticalmente */
+    z-index: 1000; /* Asegura que el modal esté encima de otros elementos */
+  }
+  
+  /* Estilos para el contenido del modal */
+  .modal-content {
+    background: white;
+    border-radius: 8px;
+    width: 400px; /* Establece el ancho del modal */
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para resaltar el modal */
+    text-align: center;
+    position: relative; /* Para posicionar el botón de cierre */
+  }
+  
+  /* Estilo del título */
+  .modal-content h2 {
+    margin-bottom: 20px; /* Espaciado debajo del título */
+    color: #333; /* Color oscuro para el título */
+  }
+  
+  /* Estilo de los campos de entrada */
+  .modal-content input {
+    width: 100%; /* Los campos ocupan todo el ancho disponible */
+    padding: 10px;
+    margin-bottom: 15px; /* Espaciado entre los campos */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px;
+  }
+  
+  /* Estilo del botón de "Sign In" */
+  .modal-content button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3f51b5; /* Color azul (puedes cambiarlo) */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer; /* Puntero en hover */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Cambiar el color del botón al pasar el mouse */
+  .modal-content button:hover {
+    background-color: #303f9f; /* Azul más oscuro en hover */
+  }
+  
+  /* Estilo para el botón de cierre "X" */
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #ee0404!important;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  /* Cambio de color en el botón de cierre */
+  .close-button:hover {
+    color: #f30505;
+  }
+  

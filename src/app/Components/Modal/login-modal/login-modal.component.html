@@ -1,0 +1,43 @@
+<mat-dialog-content>
+  <button mat-icon-button (click)="cerrarModal()" aria-label="Cerrar">
+    <mat-icon style="color: red;">close</mat-icon>
+  </button>
+  <h2>Login</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" type="email" [ngClass]="{
+          'is-invalid': emailControlIsInvalid,
+          'is-valid': emailControlIsValid
+        }">
+        <mat-error *ngIf="loginForm.controls['email'].hasError('required')">
+          Este campo es requerido
+        </mat-error>
+        <mat-error *ngIf="loginForm.controls['email'].hasError('email')">
+          No es un correo válido
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="mb-3">
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password" [ngClass]="{
+          'is-invalid': passwordControlIsValid,
+          'is-valid': passwordControlIsValid
+        }">
+        <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
+          Este campo es requerido
+        </mat-error>
+        <mat-error *ngIf="loginForm.controls['password'].hasError('minlength')">
+          La contraseña debe tener al menos 6 caracteres
+        </mat-error>
+        <mat-error *ngIf="loginForm.controls['password'].hasError('pattern')">
+          La contraseña debe contener al menos un número y una letra
+        </mat-error>
+      </mat-form-field>      
+      <mat-checkbox [(ngModel)]="rememberMe" name="rememberMe">Remember me</mat-checkbox>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</mat-dialog-content>

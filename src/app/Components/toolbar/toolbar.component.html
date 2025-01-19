@@ -1,0 +1,48 @@
+<mat-toolbar style="justify-content: flex-end;">
+    <span style="padding: 40px;">Coder</span>
+    
+    <!-- Botón de usuario -->
+    <button mat-icon-button [matMenuTriggerFor]="userMenu" style="width: fit-content;">
+      <mat-icon>person</mat-icon>
+    </button>
+    <mat-menu #userMenu="matMenu">
+      
+      <button mat-menu-item (click)="abrirLoginModal()"> <!-- Botón Sign In -->
+        <mat-icon>login</mat-icon>
+        <span>Sign In</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>logout</mat-icon>
+        <span>Log Out</span>
+      </button>
+    </mat-menu>
+    
+    <!-- Botón que abre el menú -->
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    
+    <!-- Menú desplegable -->
+    <mat-menu #menu="matMenu" class="customMenu">
+      <button mat-menu-item>
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>add</mat-icon>
+        <span>Agregar Alumno</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>list</mat-icon>
+        <span>Lista de Alumnos</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>info</mat-icon>
+        <span>About</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+  
+  <!-- Agregar el componente del modal aquí -->
+  <app-login-modal [visible]="modalVisible" (close)="cerrarLoginModal()"></app-login-modal>
+  
