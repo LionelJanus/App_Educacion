@@ -28,12 +28,12 @@
         <mat-icon>home</mat-icon>
         <span>Home</span>
       </button>
-      <button mat-menu-item>
-        <mat-icon>add</mat-icon>
+      <button mat-menu-item >
+        <mat-icon [routerLink]="['/students']">add</mat-icon>
         <span>Agregar Alumno</span>
       </button>
-      <button mat-menu-item>
-        <mat-icon>list</mat-icon>
+      <button mat-menu-item >
+        <mat-icon [routerLink]="['/students-list']">list</mat-icon>
         <span>Lista de Alumnos</span>
       </button>
       <button mat-menu-item>

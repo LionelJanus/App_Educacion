@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { noHomeroValidator } from '../../../shared/index.ts/index.ts.module';
+import { noHomeroValidator} from '../../../shared/custom-validators/index'
 
 @Component({
   selector: 'app-login-modal',
@@ -13,23 +13,16 @@ export class LoginModalComponent {
   @Input() visible = false;  // Propiedad de entrada visible
   @Output() close = new EventEmitter<void>();
 
-  loginForm: FormGroup;
+loginForm: FormGroup;
 passwordControlIsValid: any;
 checked: any;
 rememberMe: any;
 
 constructor(private fb: FormBuilder) {
   this.loginForm = this.fb.group({
-    email: ['', [Validators.required, Validators.email]],
-    password: [
-      '', 
-      [
-        Validators.required, 
-        Validators.minLength(6), 
-        Validators.pattern('^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{6,}$')
-      ]
-    ],
-    rememberMe: [false] // Agrega el control para el checkbox
+    email: [null, [Validators.required, Validators.email, noHomeroValidator]],
+    password: [null, [Validators.required, Validators.minLength(6)]],
+    rememberMe: [false],
   });
   }
 

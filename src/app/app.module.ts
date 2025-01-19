@@ -15,13 +15,20 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { StudentsComponent } from './pages/students/students.component';
+import { StudentsListComponent } from './pages/students-list/students-list.component';
+import { MatTableModule } from '@angular/material/table';  
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    LoginModalComponent
+    LoginModalComponent,
+    StudentsComponent,
+    StudentsListComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -36,6 +43,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatFormFieldModule,
     MatCheckboxModule,
     FormsModule,
+    MatTableModule,
     MatToolbarModule,
    
   ],

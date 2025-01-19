@@ -22,6 +22,7 @@ constructor(private dialog: MatDialog) {}
 abrirLoginModal() {
   const dialogRef = this.dialog.open(LoginModalComponent, {
     width: '400px', // Ajusta el tamaño de tu modal aquí
+    
     data: { /* pasar datos si es necesario */ }
   });
 

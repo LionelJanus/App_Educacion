@@ -1,0 +1,49 @@
+<div class="form-container">
+    <h2>Add Student</h2>
+    <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+  <input matInput formControlName="name" required />
+  <mat-error *ngIf="studentForm.get('name')?.hasError('required')">El nombre es obligatorio</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+
+        <mat-label>Lastname</mat-label>
+  <input matInput formControlName="lastname" required />
+  <mat-error *ngIf="studentForm.get('lastname')?.hasError('required')">El nombre es obligatorio</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+
+        <mat-label>Age</mat-label>
+  <input matInput formControlName="age" type="number" required />
+  <mat-error *ngIf="studentForm.get('age')?.hasError('required')">La edad es obligatoria</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+  <input matInput formControlName="email" required />
+  <mat-error *ngIf="studentForm.get('email')?.hasError('required')">El email es obligatorio</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Country</mat-label>
+  <input matInput formControlName="country" required />
+  <mat-error *ngIf="studentForm.get('country')?.hasError('required')">El nombre es obligatorio</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Address</mat-label>
+  <input matInput formControlName="address" required />
+  <mat-error *ngIf="studentForm.get('address')?.hasError('required')">El nombre es obligatorio</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Course</mat-label>
+  <input matInput formControlName="course" required />
+  <mat-error *ngIf="studentForm.get('course')?.hasError('required')">El nombre es obligatorio</mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="studentForm.invalid">Agregar</button>
+    </form>
+  </div>
+  
