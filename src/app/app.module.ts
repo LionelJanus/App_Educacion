@@ -18,8 +18,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { StudentsComponent } from './pages/students/students.component';
 import { StudentsListComponent } from './pages/students-list/students-list.component';
 import { MatTableModule } from '@angular/material/table';  
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
+import {MatSidenavModule} from '@angular/material/sidenav';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home-page';
+import { RegisterformComponent } from './pages/registerform/registerform.component';
 
 
 
@@ -31,6 +35,7 @@ import { HomeComponent } from './pages/home/home-page';
     StudentsComponent,
     StudentsListComponent,
     HomeComponent,
+    RegisterformComponent,
    
   ],
   imports: [
@@ -43,8 +48,11 @@ import { HomeComponent } from './pages/home/home-page';
     MatSlideToggleModule,
     MatDialogModule,
     MatInputModule,
+    MatSidenavModule,
     MatFormFieldModule,
     MatCheckboxModule,
+    MatDividerModule,
+    MatListModule,
     FormsModule,
     MatTableModule,
     RouterModule,

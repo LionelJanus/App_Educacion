@@ -25,14 +25,14 @@
     <!-- Menú desplegable -->
     <mat-menu #menu="matMenu" class="customMenu">
       <button mat-menu-item>
-        <mat-icon>home</mat-icon>
+        <mat-icon [routerLink]="['/home']">home</mat-icon>
         <span>Home</span>
       </button>
       <button mat-menu-item [routerLink]="['/students']">
-        <mat-icon >add</mat-icon>
+        <mat-icon>add</mat-icon>
         <span>Agregar Alumno</span>
       </button>
-      <button mat-menu-item  [routerLink]="['/students-list']">
+      <button mat-menu-item [routerLink]="['/students-list']">
         <mat-icon>list</mat-icon>
         <span>Lista de Alumnos</span>
       </button>

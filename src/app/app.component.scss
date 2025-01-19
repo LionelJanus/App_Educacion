@@ -1,0 +1,53 @@
+/* Contenedor principal que tiene tanto el sidenav como el contenido */
+.sidenav-container {
+  height: 100vh; /* Hace que el sidenav ocupe toda la altura de la pantalla */
+  display: flex;
+}
+
+/* Estilo del sidenav */
+.sidenav {
+  width: 300px; /* Ancho del sidenav */
+  height: 100%; /* Asegura que el sidenav ocupe toda la altura */
+  background-color: #f4f4f4; /* Fondo gris claro */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+  position: fixed; /* Hace que el sidenav esté fijo en la pantalla */
+  top: 0;
+  left: 0;
+}
+
+/* Estilo de los elementos del sidenav */
+mat-nav-list {
+  margin-top: 30px; /* Añade más espacio entre los elementos */
+}
+
+mat-list-item {
+  padding: 20px 15px; /* Aumenta el espaciado de cada ítem */
+  font-size: 18px; /* Tamaño de la fuente más grande */
+}
+.mdc-list-item__primary-text {
+  display: flex;
+  justify-content: center;
+}
+mat-list-item mat-icon {
+  margin-right: 15px;
+  font-size: 24px; /* Tamaño más grande para los íconos */
+}
+
+/* Color de fondo al pasar el ratón por encima */
+mat-list-item:hover {
+  background-color: #1976d2; /* Color de fondo cuando el usuario pasa el ratón */
+  color: white;
+}
+
+/* Estilo para el contenido principal cuando el sidenav está abierto */
+mat-sidenav-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 300px; /* Evita que el contenido se solape con el sidenav */
+}
+
+/* Botón de abrir el sidenav */
+mat-toolbar {
+  background-color: #1976d2; /* Azul para la barra de herramientas */
+  color: white;
+}

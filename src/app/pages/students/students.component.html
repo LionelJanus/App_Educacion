@@ -1,6 +1,6 @@
 <div class="form-container">
     <h2>Add Student</h2>
-    <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+    <form style="display: flex;justify-content: center;"   [formGroup]="studentForm" (ngSubmit)="onSubmit()">
       <mat-form-field appearance="fill">
         <mat-label>Name</mat-label>
   <input matInput formControlName="name" required />
